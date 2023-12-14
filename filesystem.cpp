@@ -56,6 +56,7 @@ FileSystem::Node* FileSystem::findNodeInPath(const std::string& path, Node* curr
 }
 
 
+
 void FileSystem::executeCommand(const std::string& command){
     std::istringstream iss(command);
     std::string cmd, arg1, arg2;
@@ -65,10 +66,10 @@ void FileSystem::executeCommand(const std::string& command){
 
     if (cmd == "mkdir") {
         mkdir(arg1);
-        std::cout<<arg1<<"\n";
+       // std::cout<<arg1<<"\n";
     } else if (cmd == "cd") {
         cd(arg1);
-        std::cout<<arg1<<"\n";
+       // std::cout<<arg1<<"\n";
     } else if (cmd == "ls") {
         ls();
     } else if (cmd == "grep") {
@@ -78,33 +79,33 @@ void FileSystem::executeCommand(const std::string& command){
             text += arg1 + " ";
         }
             grep(text);
-            std::cout<<text<<"\n";
+           // std::cout<<text<<"\n";
         } else {
             std::cout << "Error: Missing pattern for grep" << std::endl;
         }
     } else if (cmd == "cat") {
         cat(arg1);
-        std::cout<<arg1<<"\n";
+        //std::cout<<arg1<<"\n";
     } else if (cmd == "touch") {
         touch(arg1);
-        std::cout<<arg1<<"\n";
+        //std::cout<<arg1<<"\n";
     } else if (cmd == "echo") {
         // Combine the remaining arguments into a single string
         std::string text;
         while (iss >> arg1) {
             text += arg1 + " ";
         }
-        std::cout<<text<<"\n";
+       // std::cout<<text<<"\n";
         echo(text);
     } else if (cmd == "mv") {
         mv(arg1, arg2);
-        std::cout<<arg1<<" "<<arg2<<"\n";
+       // std::cout<<arg1<<" "<<arg2<<"\n";
     } else if (cmd == "cp") {
         cp(arg1, arg2);
-          std::cout<<arg1<<" "<<arg2<<"\n";
+        //  std::cout<<arg1<<" "<<arg2<<"\n";
     } else if (cmd == "rm") {
         rm(arg1);
-        std::cout<<arg1<<"\n";
+       // std::cout<<arg1<<"\n";
     } else {
         std::cout << "Error: Unknown command" << std::endl;
     }
