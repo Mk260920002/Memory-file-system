@@ -2,11 +2,14 @@
 
 void FileSystem::ls() const {
     for (Node* child : currentDirectory->children) {
+       bool ok=false;
         std::cout << child->name;
-        if (child->isDirectory) {
+        if (child && child->isDirectory) {
+           
             std::cout << "/";
+            ok=true;
         }
-        std::cout <<"\n";
+       if(ok) std::cout <<"\n";
     }
     
 }

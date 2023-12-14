@@ -19,10 +19,10 @@ int main() {
         std::string command;
         std::cout << "$ :";
         std::getline(std::cin, command);
-
+       if(command=="exit")break;
         fileSystem.executeCommand(command);
     }
-    std::cout<<"Hello from main "<<"\n";
+    // std::cout<<"Hello from main "<<"\n";
 
     return 0;
 }
