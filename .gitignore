@@ -1,7 +1,4 @@
 # .gitignore
-
-# Ignore object files
-.o
-.viscode
-# Ignore build directories
-/build/
+*.o
+build/
+.vscode
