@@ -2,6 +2,6 @@
 
 # Ignore object files
 .o
-
+.viscode
 # Ignore build directories
 /build/
