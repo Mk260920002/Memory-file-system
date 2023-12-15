@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignore object files
+*.o
+
+# Ignore build directories
+/build/
